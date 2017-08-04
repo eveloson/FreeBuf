@@ -82,6 +82,8 @@ int pageNum = 0;
 
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    NewCell *cell = [NewCell cellWithTableView:tableView];
+    cell.news = self.dataSource[indexPath.row];
+    return cell;
 }
 @end
