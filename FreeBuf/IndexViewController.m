@@ -7,7 +7,7 @@
 //
 #import "NewCell.h"
 #import "IndexViewController.h"
-
+#import "NewsDetailViewController.h"
 @interface IndexViewController ()
 @end
 
@@ -42,7 +42,7 @@ int pageNum = 0;
             news.href = [title objectForKey:@"href"];
             
             TFHppleElement *nameHead = [[newsInfoDl firstChildWithTagName:@"dd"] firstChildWithClassName:@"name-head"];
-            news.headSrc = [[nameHead firstChildWithTagName:@"img"] objectForKey:@"src"];
+            news.headSrc = [NSString removeWhiteCharacterWithString:[[nameHead firstChildWithTagName:@"img"] objectForKey:@"src"]];
             news.author = [nameHead firstChildWithTagName:@"a"].text;
             news.authorHref = [[nameHead firstChildWithTagName:@"a"] objectForKey:@"href"];
             
@@ -72,14 +72,29 @@ int pageNum = 0;
                 TFHppleElement *tagElement = obj;
                 [news.look addObject:tagElement.text];
             }];
-            [self.dataSource addObject:news];
-        }];
-        WLog(@"%@",self.dataSource);
+            if (news.title!=nil) {
+                [self.dataSource addObject:news];
+            }
+            
+        }];;
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
         [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+        [self.tableView reloadData];
     }];
 
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 352;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    News *news = self.dataSource[indexPath.row];
+    NewsDetailViewController *vc = [NewsDetailViewController new];
+    vc.news = news;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NewCell *cell = [NewCell cellWithTableView:tableView];

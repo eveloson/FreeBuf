@@ -17,5 +17,6 @@ target 'FreeBuf' do
   pod 'MJRefresh'
 #  pod 'HTMLKit'
   pod 'DKNightVersion'
+  pod 'DTCoreText'
   pod 'hpple'
 end

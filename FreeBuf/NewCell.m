@@ -10,11 +10,12 @@
 #import <UIButton+WebCache.h>
 #import <UIImageView+WebCache.h>
 @interface NewCell ()
-@property (weak, nonatomic) IBOutlet UIButton *headImg;
+@property (weak, nonatomic) IBOutlet UIImageView *headImg;
 @property (weak, nonatomic) IBOutlet UILabel *author;
 @property (weak, nonatomic) IBOutlet UILabel *time;
 @property (weak, nonatomic) IBOutlet UILabel *text;
 @property (weak, nonatomic) IBOutlet UIImageView *img;
+@property (weak, nonatomic) IBOutlet UILabel *title;
 
 @end
 
@@ -30,10 +31,12 @@
 }
 - (void)setNews:(News *)news{
     _news = news;
-    [self.headImg sd_setImageWithURL:[NSURL URLWithString:news.headSrc] forState:UIControlStateNormal];
+    [self.headImg sd_setImageWithURL:[NSURL URLWithString:news.headSrc] placeholderImage:[UIImage imageNamed:@""]];
     self.author.text = news.author;
-    self.text = news.text;
-    self.time = news.time;
+    self.text.text = news.text;
+    self.time.text = news.time;
+    self.title.text = news.title;
+    WLog(@"%@",news.headSrc);
     [self.img sd_setImageWithURL:[NSURL URLWithString:news.src] placeholderImage:[UIImage imageNamed:@""]];
 }
 - (void)awakeFromNib {

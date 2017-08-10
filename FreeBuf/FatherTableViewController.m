@@ -45,7 +45,7 @@
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     self.tableView.backgroundColor = RGB(240, 240, 240);
-    self.tableView.mj_footer.hidden = YES;
+    self.tableView.mj_footer.hidden = NO;
     UILabel *noDataLabel  = [UILabel new];
     noDataLabel.frame = self.tableView.bounds;
     noDataLabel.text = @"没有获取到数据，请下拉加载重试";

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4433B5D51F358F9C009DFF7F /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4433B5D31F358F9C009DFF7F /* NewsDetailViewController.m */; };
 		44601E071F3453EF00FEECFC /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 44601E061F3453EF00FEECFC /* NSString+Category.m */; };
 		44601E0A1F34558C00FEECFC /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 44601E091F34558C00FEECFC /* Tag.m */; };
 		44601E111F3460A200FEECFC /* NewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44601E0F1F3460A200FEECFC /* NewCell.m */; };
@@ -33,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4433B5D21F358F9C009DFF7F /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
+		4433B5D31F358F9C009DFF7F /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
 		44601E051F3453EF00FEECFC /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
 		44601E061F3453EF00FEECFC /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
 		44601E081F34558C00FEECFC /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
@@ -165,6 +168,8 @@
 				44601E0E1F3460A200FEECFC /* NewCell.h */,
 				44601E0F1F3460A200FEECFC /* NewCell.m */,
 				44601E101F3460A200FEECFC /* NewCell.xib */,
+				4433B5D21F358F9C009DFF7F /* NewsDetailViewController.h */,
+				4433B5D31F358F9C009DFF7F /* NewsDetailViewController.m */,
 			);
 			name = Tab0;
 			sourceTree = "<group>";
@@ -283,7 +288,7 @@
 				TargetAttributes = {
 					44DD8A131F32B81400C55DB7 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 3PYKU7D6KZ;
+						DevelopmentTeam = 3J99V2UF4S;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -348,7 +353,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		AC7AAA374820F5CD4B178A71 /* [CP] Copy Pods Resources */ = {
@@ -391,6 +396,7 @@
 				44DD8A381F32BD2200C55DB7 /* IndexViewController.m in Sources */,
 				44601E111F3460A200FEECFC /* NewCell.m in Sources */,
 				44601E071F3453EF00FEECFC /* NSString+Category.m in Sources */,
+				4433B5D51F358F9C009DFF7F /* NewsDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,13 +517,15 @@
 			baseConfigurationReference = BFF2381DC2B09C0071033476 /* Pods-FreeBuf.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3PYKU7D6KZ;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3J99V2UF4S;
 				GCC_PREFIX_HEADER = FreeBuf/PrefixHeader.pch;
 				INFOPLIST_FILE = FreeBuf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.clkeji.FreeBuf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -526,13 +534,15 @@
 			baseConfigurationReference = 5F62CF1140FEA757BB781160 /* Pods-FreeBuf.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3PYKU7D6KZ;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3J99V2UF4S;
 				GCC_PREFIX_HEADER = FreeBuf/PrefixHeader.pch;
 				INFOPLIST_FILE = FreeBuf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.clkeji.FreeBuf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

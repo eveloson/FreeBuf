@@ -17,6 +17,8 @@
 #import "News.h"
 #import "NSString+Category.h"
 #import "Tag.h"
+#import <DTCoreText.h>
+#import <UIImageView+WebCache.h>
 //获取设备的物理高度
 #define ScreenHeight ([UIScreen mainScreen].bounds.size.height)
 //获取设备的物理宽度
