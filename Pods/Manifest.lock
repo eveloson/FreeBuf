@@ -46,6 +46,7 @@ PODS:
     - DTFoundation/Core
   - DTFoundation/UIKit (1.7.12):
     - DTFoundation/Core
+  - GSOCGumbo (0.1)
   - hpple (0.2.0)
   - IQKeyboardManager (3.3.7)
   - Masonry (1.0.2)
@@ -62,6 +63,7 @@ DEPENDENCIES:
   - CYLTabBarController
   - DKNightVersion
   - DTCoreText
+  - GSOCGumbo (~> 0.1)
   - hpple
   - IQKeyboardManager
   - Masonry
@@ -70,6 +72,23 @@ DEPENDENCIES:
   - SDWebImage
   - SVProgressHUD
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - Aspects
+    - CYLTabBarController
+    - DKNightVersion
+    - DTCoreText
+    - DTFoundation
+    - GSOCGumbo
+    - hpple
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - SDWebImage
+    - SVProgressHUD
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
@@ -77,6 +96,7 @@ SPEC CHECKSUMS:
   DKNightVersion: eaa80cc4014b4bae7d4b535fd87ecc6a3c2767b3
   DTCoreText: 51904f2374af443e0d270d6fdc76035ab6f9ef8a
   DTFoundation: 26a164ef510877387906fb92bff524a792db4bf8
+  GSOCGumbo: f6899023f50eef0bcb817c9e7f98f952954ca50a
   hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
   IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
@@ -85,6 +105,6 @@ SPEC CHECKSUMS:
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: b28aa27cb142d5a23ca96baeec8f0c4443e9ff72
+PODFILE CHECKSUM: af4bb8f297c519ce6d03437c082cf07099313dd0
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.5.3

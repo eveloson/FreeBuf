@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D74A65F4A4DC5A17667C33081858ABF7'
-               BlueprintName = 'DTCoreText'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libDTCoreText.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9D63EAA3309FDF2CE818CA0A70E77889"
+               BlueprintName = "DTCoreText"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libDTCoreText.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

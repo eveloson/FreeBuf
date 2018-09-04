@@ -265,7 +265,6 @@
 				44DD8A101F32B81400C55DB7 /* Sources */,
 				44DD8A111F32B81400C55DB7 /* Frameworks */,
 				44DD8A121F32B81400C55DB7 /* Resources */,
-				5997EBAC1A8F80B11C5AFBAE /* [CP] Embed Pods Frameworks */,
 				AC7AAA374820F5CD4B178A71 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -288,7 +287,7 @@
 				TargetAttributes = {
 					44DD8A131F32B81400C55DB7 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 3J99V2UF4S;
+						DevelopmentTeam = 3PYKU7D6KZ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -326,34 +325,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5997EBAC1A8F80B11C5AFBAE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FreeBuf/Pods-FreeBuf-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6D7A8CE73176DC6C096107C1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FreeBuf-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AC7AAA374820F5CD4B178A71 /* [CP] Copy Pods Resources */ = {
@@ -362,9 +349,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FreeBuf/Pods-FreeBuf-resources.sh",
+				"${PODS_ROOT}/DKNightVersion/DKNightVersion/ColorTable/DKColorTable.txt",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DKColorTable.txt",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -518,7 +514,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 3J99V2UF4S;
+				DEVELOPMENT_TEAM = 3PYKU7D6KZ;
 				GCC_PREFIX_HEADER = FreeBuf/PrefixHeader.pch;
 				INFOPLIST_FILE = FreeBuf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -535,7 +531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 3J99V2UF4S;
+				DEVELOPMENT_TEAM = 3PYKU7D6KZ;
 				GCC_PREFIX_HEADER = FreeBuf/PrefixHeader.pch;
 				INFOPLIST_FILE = FreeBuf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

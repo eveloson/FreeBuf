@@ -19,4 +19,6 @@ target 'FreeBuf' do
   pod 'DKNightVersion'
   pod 'DTCoreText'
   pod 'hpple'
+  pod 'GSOCGumbo', '~> 0.1'
+#  pod 'KMCGeigerCounter'
 end

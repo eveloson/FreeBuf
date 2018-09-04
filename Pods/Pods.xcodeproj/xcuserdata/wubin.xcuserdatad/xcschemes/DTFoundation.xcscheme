@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B51CDCD1D606C895DBCBA3BF406C4298'
-               BlueprintName = 'DTFoundation'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libDTFoundation.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ACA712C573B853F839D2824DDD6CF8CA"
+               BlueprintName = "DTFoundation"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libDTFoundation.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

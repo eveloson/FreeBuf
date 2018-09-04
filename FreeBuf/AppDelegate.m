@@ -24,6 +24,7 @@
     CYLTabBarControllerConfig *tabBarControllerConfig = [[CYLTabBarControllerConfig alloc] init];
     [self.window setRootViewController:tabBarControllerConfig.tabBarController];
     tabBarControllerConfig.tabBarController.delegate = self;
+    
     [self.window makeKeyAndVisible];
     //    [self customizeInterface];
     //设置弹出键盘
@@ -38,6 +39,7 @@
     UINavigationBar *navBar = [UINavigationBar appearance];
     navBar.tintColor = [UIColor whiteColor];
     navBar.barTintColor = ThemeColor;
+    
     return YES;
 }
 
